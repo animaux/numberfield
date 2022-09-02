@@ -14,13 +14,11 @@
 		</author>
 	</authors>
 	<releases>
-		<release version="1.7.2" date="2017-08-23" min="2.5.x" max="2.x.x">
-			- PHP7 Compatibility for Symphony 2.x.x
+		<release version="1.7.1" date="2022-09-02" min="2.7.10">
+			- PHP 8.1 Fix, may require PHP7
+			- add German language
 		</release>
-		<release version="1.7.1" date="2016-01-05" min="2.5" max="2.6.x">
-			- Set 'entry_id' as unique
-		</release>
-		<release version="1.7" date="2014-12-22" min="2.5" max="2.6.x">
+		<release version="1.7" date="2014-12-22" min="2.5">
 			- Support Symphony 2.5+
 		</release>
 		<release version="1.6.1" date="2013-02-25" min="2.3.2" max="2.4.x">

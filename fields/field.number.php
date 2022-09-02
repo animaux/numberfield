@@ -42,7 +42,7 @@
 				  `entry_id` int(11) unsigned NOT NULL,
 				  `value` double default NULL,
 				  PRIMARY KEY  (`id`),
-				  UNIQUE KEY `entry_id` (`entry_id`),
+				  KEY `entry_id` (`entry_id`),
 				  KEY `value` (`value`)
 				) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci"
 			);
@@ -77,7 +77,7 @@
 
 		public function displayPublishPanel(XMLElement &$wrapper, $data = null, $flagWithError = null, $fieldnamePrefix = null, $fieldnamePostfix = null, $entry_id = null){
 
-			$value = $data['value'];
+			$value = $data['value'] ?? null;
 			$label = Widget::Label($this->get('label'));
 			if($this->get('required') != 'yes') {
 				$label->appendChild(new XMLElement('i', __('Optional')));
@@ -230,7 +230,7 @@
 				array(
 					'title'				=> 'between',
 					'filter'			=> 'x to y',
-					'help'				=> __('Find values between two values with %s to %s', array(
+					'help'				=> __('Find values between two values with, %s to %s', array(
 						'<code>$x</code>',
 						'<code>$y</code>'
 					))
