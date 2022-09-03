@@ -67,7 +67,8 @@
 			$id = $this->get('id');
 
 			if ($id === false) return false;
-
+      
+      $fields = $fields ?? null;
 			return FieldManager::saveSettings($id, $fields);
 		}
 
